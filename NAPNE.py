@@ -1,4 +1,4 @@
-from flask import Flask, abort, request
+from flask import Flask, abort, request, render_template
 import json
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return '<a href="/cadastrar">cadastrar</a><br><a href="/listar">listar</a>'
+    return render_template('index.html')
 
 
 @app.route('/cadastrar')

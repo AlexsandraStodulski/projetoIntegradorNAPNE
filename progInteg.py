@@ -38,6 +38,15 @@ def login():
 def index():
     return render_template('pages/index.html')
 
+@app.route('/formulario')
+def formulario():
+    return render_template('pages/formulario.html')
+
+@app.route('/ficha')
+def ficha():
+    return render_template('pages/ficha.html')
+
+
 @app.route('/protected')
 @flask_login.login_required
 def protected():
